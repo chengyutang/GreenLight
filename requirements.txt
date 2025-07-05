@@ -1,0 +1,6 @@
+torch
+stable-baselines3
+gymnasium
+traci
+sumolib
+numpy
