@@ -16,7 +16,7 @@ The model can be trained using `train.py`. The user will need to specify the pat
 
 Use `python train.py --help` to see all accepted arguments that can be used to control the environment, RL model, and training.
 
-After a model is trained, the `test.py` script can be used to evaluate the model. The testing simulation scenario should use the same network used for training.
+After a model is trained, the `test.py` script can be used to evaluate the model. The testing simulation scenario should use the same network used for training. Use `python test.py --help` to see all accepted arguments.
 
 For more technical details, please refer to the paper.
 
