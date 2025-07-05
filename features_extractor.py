@@ -57,7 +57,7 @@ class FeaturesExtractor(BaseFeaturesExtractor):
 
 class AttentionBlock(torch.nn.Module):
     """
-    (Bahdanau attention + residual) -> batch norm -> (feed-forward + residual connection) -> batch_norm
+    (Bahdanau attention + residual) -> norm -> (feed-forward + residual connection) -> norm
     """
     def __init__(
             self,
