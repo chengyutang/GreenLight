@@ -43,25 +43,7 @@ class FeaturesExtractor(BaseFeaturesExtractor):
 
     def forward(self, obs):
         seq_obs = obs["sequential_obs"]
-        # batch_size, num_signals, num_lanes, max_queue_length, feature_dim = sequential_obs.shape
-        # sequential_obs = sequential_obs.reshape((-1, max_queue_length, feature_dim))
-        # mask = ~sequential_obs.isnan()
-        # lengths = mask[:, :, 0].sum(dim=1).squeeze()
-        # valid_indices = lengths > 0
-        # valid_sequential_obs = sequential_obs[valid_indices]
-        # valid_lengths = lengths[valid_indices]
-        # encoded_sequential_obs = torch.zeros((sequential_obs.shape[0], self.recurrent.hidden_size)).to(self.device)
-        # if len(valid_lengths) > 0:
-        #     packed_valid_sequential_obs = pack_padded_sequence(
-        #         valid_sequential_obs,
-        #         valid_lengths.to("cpu"),
-        #         batch_first=True,
-        #         enforce_sorted=False
-        #     ).to(self.device)
-        #     _, (last_hidden, *_) = self.recurrent(packed_valid_sequential_obs)
-        #     encoded_sequential_obs[valid_indices] = last_hidden
-        # encoded_sequential_obs = encoded_sequential_obs.reshape((batch_size, num_signals, -1))
-
+        
         encoded_seq_obs = self.recurrent_encoder(seq_obs)
 
         pre_embedding = torch.cat((
