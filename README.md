@@ -1,4 +1,4 @@
-Source code for paper "[GreenLight: Green Traffic Signal Control using Attention-based Reinforcement Learning on Fog Computing Network](https://dl.acm.org/doi/10.1109/IGSC64514.2024.00032)".
+Source code for paper "[GreenLight: Green Traffic Signal Control using Attention-based Reinforcement Learning on Fog Computing Network](https://doi.org/10.1109/IGSC64514.2024.00032)".
 
 # Prerequisites
 - [SUMO](https://eclipse.dev/sumo/) >= 1.19.
