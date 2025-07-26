@@ -36,11 +36,7 @@ VEHICLE_DATA_TO_SUBSCRIBE = [
 
 
 class Environment(Env):
-    """
-    Observation: number of waiting vehicles of each lane and current phase index.
-    Action: binary vector with n elements, where n is the number of traffic lights.
-        action[i] = 0 means to keep the current phase of the ith traffic light, 1 means switching to the next phase
-    """
+
     def __init__(
             self,
             config_file: str,
